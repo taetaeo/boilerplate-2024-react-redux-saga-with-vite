@@ -1,0 +1,8 @@
+:root {
+  --header-bg-color: rgba(255, 255, 255, 0.8);
+  --header-blur: 5px;
+  --header-color: rgb(67, 65, 65);
+  --header-height: 70px;
+  --nav-gap: 15px;
+  --footer-border-color: rgba(248, 248, 248, 1);
+}
