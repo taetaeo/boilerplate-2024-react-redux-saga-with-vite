@@ -4,7 +4,9 @@ import { LinkButton } from "@/components/atoms";
 const Header = () => {
   return (
     <header className="header">
-      <div className="logo">Taeo boilerplate</div>
+      <div className="logo">
+        <LinkButton href="/">Taeo's boilerplate</LinkButton>
+      </div>
       <nav className="nav">
         <LinkButton href="#home">Home</LinkButton>
         <LinkButton href="#about">About</LinkButton>

@@ -1,11 +1,37 @@
+/* 플렉스 컨테이너 */
 .flex {
   display: flex;
+}
+
+/* 방향 */
+.row {
+  flex-direction: row;
+}
+
+.column {
+  flex-direction: column;
+}
+
+/* 정렬 */
+.center {
+  justify-content: center;
   align-items: center;
 }
 
-.flex .row {
-  flex-direction: row;
+.space-between {
+  justify-content: space-between;
 }
-.flex .column {
-  flex-direction: column;
+
+.space-around {
+  justify-content: space-around;
+}
+
+.start {
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.end {
+  justify-content: flex-end;
+  align-items: flex-end;
 }

@@ -4,16 +4,12 @@ export type TypographyAs = "span" | "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "p
 
 type Props = {
   as: TypographyAs;
+  variant: "h1" | "h2" | "h3" | "body" | "small";
 };
 
-const Typography = ({
-  as: Component = "span",
-
-  children,
-  ...rest
-}: PropsWithChildren<Props>) => {
+const Typography = ({ as: Component = "span", variant, children, ...rest }: PropsWithChildren<Props>) => {
   return (
-    <Component className="typography" {...rest}>
+    <Component className={`typography ${variant}`} {...rest}>
       {children}
     </Component>
   );
