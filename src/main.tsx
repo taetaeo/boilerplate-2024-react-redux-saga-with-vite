@@ -1,14 +1,30 @@
-import React from "react";
+import React, { Suspense } from "react";
 import ReactDOM from "react-dom/client";
+
+import { ReduxProvider } from "@/app/providers";
+import reduxConfigs from "@/app/configs/redux.config";
+import { rootSaga } from "@/store";
+
+import App from "./app";
 
 import "@/app/styles/index.css";
 import "@/app/styles/App.css";
 import "vite/modulepreload-polyfill";
 
-import App from "./App";
+reduxConfigs.middleware.run(rootSaga);
+const root = ReactDOM.createRoot(document.getElementById("root") as HTMLElement);
 
-ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+function render() {
+  root.render(
+    <React.StrictMode>
+      <ReduxProvider store={reduxConfigs.store}>
+        <Suspense fallback={<div>로딩중....</div>}>
+          <App />
+        </Suspense>
+      </ReduxProvider>
+    </React.StrictMode>
+  );
+}
+
+render();
+reduxConfigs.store.subscribe(render);

@@ -2,7 +2,7 @@ import React from "react";
 import { Outlet } from "react-router-dom";
 import { Footer, Header } from "@/ui/blocks";
 
-const LayoutContainer = () => {
+const MainLayout = () => {
   return (
     <>
       <Header />
@@ -12,4 +12,4 @@ const LayoutContainer = () => {
   );
 };
 
-export default LayoutContainer;
+export default MainLayout;
