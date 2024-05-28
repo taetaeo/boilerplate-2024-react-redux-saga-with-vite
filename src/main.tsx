@@ -8,7 +8,6 @@ import { rootSaga } from "@/store";
 import App from "./app";
 
 import "@/app/styles/index.css";
-import "@/app/styles/App.css";
 import "vite/modulepreload-polyfill";
 
 reduxConfigs.middleware.run(rootSaga);

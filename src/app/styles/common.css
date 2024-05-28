@@ -1,0 +1,91 @@
+@import "./variable.css";
+
+/* Header 스타일 추가 */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  color: white;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  box-sizing: border-box;
+  background-color: rgba(255, 255, 255, 0.8); /* 흐릿한 효과를 위한 하얀 배경 */
+  backdrop-filter: blur(5px); /* 흐린 효과 */
+  z-index: 1000;
+  color: rgb(67, 65, 65);
+}
+
+.header .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.header .nav {
+  display: flex;
+  gap: 15px;
+}
+
+.header .nav a {
+  color: rgb(67, 65, 65);
+  font-size: 1rem;
+}
+
+.empty {
+  height: 70px;
+  width: 100%;
+}
+/* 
+ ===================================================================
+
+                          Footer 스타일 
+
+ ===================================================================
+*/
+
+.footer {
+  height: 80px;
+  border-width: 1px;
+  border-style: solid;
+  border-top-color: var(--footer-border-color);
+  background-color: #fff;
+  left: 0;
+  bottom: 0;
+  text-align: center;
+  padding: 20px;
+  background-color: #333;
+  color: #fff;
+}
+.footer .logo {
+  display: flex;
+  justify-content: flex-start;
+}
+.footer .footer-content {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  box-sizing: border-box;
+}
+
+.footer .footer-nav {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.footer .footer-nav a {
+  color: #fff;
+  font-size: 0.9rem;
+}
+.footer-content > p {
+  color: #959393;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.main-content {
+  padding: 8px;
+}
