@@ -11,14 +11,15 @@ const MainLayout = () => {
       <div className="empty" />
 
       {/* =========== 컨텐츠 =========== */}
-      <LeftSideNavigation />
       <main>
+        <LeftSideNavigation />
         <Outlet />
+        <RightSideNavigation />
       </main>
       {/* =========== 컨텐츠 =========== */}
 
       {/* 사이드 네비게이션  - 오른쪽 */}
-      <RightSideNavigation />
+      {/* <RightSideNavigation /> */}
       {/* 사이드 네비게이션 - 오른쪽 */}
 
       {/* =========== 푸터 =========== */}
